@@ -1,5 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Test .gitignore");
+        System.out.println("Test lesson2");
     }
 }
