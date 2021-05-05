@@ -2,12 +2,12 @@ package lesson6;
 
 public class Zoo {
     public static void main(String[] args) {
-        Cat cat1 = new Cat("Tom");
-        Cat cat2 = new Cat("Jerry");
-        Cat cat3 = new Cat("Bob");
-        Dog dog1 = new Dog("Pip");
-        Dog dog2 = new Dog("Myer");
-        Dog dog3 = new Dog("King");
+        Cat cat1 = new Cat("Tom",200);
+        Cat cat2 = new Cat("Jerry",150);
+        Cat cat3 = new Cat("Bob",170);
+        Dog dog1 = new Dog("Pip",500,10);
+        Dog dog2 = new Dog("Myer",450,15);
+        Dog dog3 = new Dog("King",520,12);
 
         System.out.println("Cats:");
         System.out.println();

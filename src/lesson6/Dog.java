@@ -1,18 +1,20 @@
 package lesson6;
 
 public class Dog extends Animal {
-    private static final int MAX_RUN_DISTANCE = 500;
-    private static final int MAX_SWIM_DISTANCE = 10;
+    private int maxRunDistance;
+    private int maxSwimDistance;
     private static int countDogs;
 
-    public Dog(String name) {
+    public Dog(String name, int maxRunDistance, int maxSwimDistance) {
         super(name);
+        this.maxRunDistance = maxRunDistance;
+        this.maxSwimDistance = maxSwimDistance;
         countDogs ++;
     }
 
     @Override
     public void run(int distance) {
-        if (distance > MAX_RUN_DISTANCE) {
+        if (distance > maxRunDistance) {
             System.out.println(this.getName() + " can't run that much.");
             return;
         }
@@ -21,7 +23,7 @@ public class Dog extends Animal {
 
     @Override
     public void swim(int distance) {
-        if (distance > MAX_SWIM_DISTANCE) {
+        if (distance > maxSwimDistance) {
             System.out.println(this.getName() + " can't swim that much.");
             return;
         }

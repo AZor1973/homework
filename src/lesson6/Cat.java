@@ -1,17 +1,18 @@
 package lesson6;
 
 public class Cat extends Animal {
-    private static final int MAX_RUN_DISTANCE = 200;
+    private int maxRunDistance;
     private static int countCats;
 
-    public Cat(String name) {
+    public Cat(String name, int maxRunDistance) {
         super(name);
+        this.maxRunDistance = maxRunDistance;
         countCats ++;
     }
 
     @Override
     public void run(int distance) {
-        if (distance > MAX_RUN_DISTANCE) {
+        if (distance > maxRunDistance) {
             System.out.println(this.getName() + " can't run that much.");
             return;
         }
