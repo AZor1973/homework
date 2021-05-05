@@ -2,16 +2,11 @@ package lesson6;
 
 public class Animal {
     private final String name;
-    private static int COUNT_ANIMALS;
+    private static int countAnimals;
 
     public Animal(String name) {
         this.name = name;
-        countBeing();
-    }
-
-    public int countBeing() {
-
-        return COUNT_ANIMALS++;
+        countAnimals ++;
     }
 
     public void run(int distance) {
@@ -28,6 +23,6 @@ public class Animal {
     }
 
     public static int getCountAnimals() {
-        return COUNT_ANIMALS;
+        return countAnimals;
     }
 }
