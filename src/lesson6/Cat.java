@@ -1,7 +1,7 @@
 package lesson6;
 
 public class Cat extends Animal {
-    private int maxRunDistance;
+    private final int maxRunDistance;
     private static int countCats;
 
     public Cat(String name, int maxRunDistance) {

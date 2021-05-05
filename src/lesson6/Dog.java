@@ -1,8 +1,8 @@
 package lesson6;
 
 public class Dog extends Animal {
-    private int maxRunDistance;
-    private int maxSwimDistance;
+    private final int maxRunDistance;
+    private final int maxSwimDistance;
     private static int countDogs;
 
     public Dog(String name, int maxRunDistance, int maxSwimDistance) {
