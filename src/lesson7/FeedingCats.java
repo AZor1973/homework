@@ -31,7 +31,7 @@ public class FeedingCats {
             plate.infoPlate();
             cat.eat(plate);
             cat.infoSatiety();
-            if (!cat.getSatiety()){
+            if (!cat.getSatiety()) {
                 plate.cleaningPlate();
                 plate.fillingPlate();
                 cat.eat(plate);
