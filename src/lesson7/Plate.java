@@ -3,6 +3,7 @@ package lesson7;
 public class Plate {
     private int food;
     private boolean isPlateEmpty = true;
+    private static final int PLATE_VOLUME = 30;
 
     public Plate() {
         this.food = 0;
@@ -10,7 +11,7 @@ public class Plate {
 
     public void fillingPlate() {
         if (isPlateEmpty) {
-            food = 30;
+            food = PLATE_VOLUME;
             isPlateEmpty = false;
             System.out.println("We filled the plate.");
         }
@@ -33,7 +34,7 @@ public class Plate {
     public void infoPlate() {
         if (isPlateEmpty) {
             System.out.println("Plate is empty.");
-        }else if (food == 40){
+        }else if (food == PLATE_VOLUME){
             System.out.println("The plate is full. There are " + food + " pieces of food on a plate.");
         } else {
             System.out.println("There are " + food + " pieces of food on a plate.");
