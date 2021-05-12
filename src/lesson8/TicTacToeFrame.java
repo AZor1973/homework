@@ -19,7 +19,6 @@ public class TicTacToeFrame extends JFrame {
         setTitle("TicTacToe");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
-
         setLayout(new GridLayout(size, size));
         Font font = new Font("Arial", Font.BOLD, 70);
 
@@ -68,39 +67,7 @@ public class TicTacToeFrame extends JFrame {
                 add(arrButtons[i][j]);
             }
         }
-        while (true){
-            TicTacToeLogic.humanTurn();
-            if (TicTacToeLogic.checkWin(TicTacToeLogic.getDotX())) {
-                result = "Победил человек";
-                System.out.println(result);
-                command = GAME_OVER;
-                break;
-            }
-            if (TicTacToeLogic.isMapFull()) {
-                result = "Ничья";
-                System.out.println(result);
-                command = GAME_OVER;
-                break;
-            }
-            if (command.equals(AI_TURN)) {
-                TicTacToeLogic.aiTurn();
-                arrButtons[TicTacToeLogic.yOut][TicTacToeLogic.xOut].setText("O");
-                arrButtons[TicTacToeLogic.yOut][TicTacToeLogic.xOut].setForeground(Color.RED);
-                if (TicTacToeLogic.checkWin(TicTacToeLogic.getDotO())) {
-                    result = "Победил ИИ";
-                    System.out.println(result);
-                    command = GAME_OVER;
-                    break;
-                }
-                if (TicTacToeLogic.isMapFull()) {
-                    result = "Ничья";
-                    System.out.println(result);
-                    command = GAME_OVER;
-                    break;
-                }
-            }
-            if (command.equals(GAME_OVER)) finalFrame();
-        }
+
         TicTacToeLogic.initMap();
         TicTacToeLogic.printMap();
         setVisible(true);
