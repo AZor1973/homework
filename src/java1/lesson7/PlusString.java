@@ -1,4 +1,4 @@
-package lesson7;
+package java1.lesson7;
 
 public class PlusString {
     public static void main(String[] args) {
